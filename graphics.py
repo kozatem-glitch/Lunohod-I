@@ -70,8 +70,6 @@ def atmosphere_density(h):
     """Плотность атмосферы на высоте h (м)"""
     if h < 0:
         h = 0
-    if h > 70000:  # атмосфера заканчивается на 70 км
-        return 0.0
     return rho0 * np.exp(-h / H)
 
 
